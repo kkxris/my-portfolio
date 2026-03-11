@@ -1,0 +1,153 @@
+.projects {
+    min-height: 100vh;
+    color: white;
+    padding: 100px 60px;
+    box-sizing: border-box;
+}
+
+.projects-heading {
+    font-family: 'Pinyon Script';
+    font-size: 80px;
+    color: rgb(121, 15, 15);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.fan-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.fan-track {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;  /* gives the 3D depth */
+}
+
+.fan-slide {
+    position: absolute;
+    width: 300px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    text-align: center;
+}
+
+.fan-slide img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.fan-slide h3 {
+    font-family: 'Pinyon Script';
+    font-size: 28px;
+    color: rgb(121, 15, 15);
+    margin-top: 12px;
+}
+
+.fan-slide:hover img {
+    transform: scale(1.08);
+    transition: transform 0.4s ease;
+}
+
+.fan-slide img {
+    transition: transform 0.4s ease;  /* smooth zoom back out */
+}
+.webdev {
+       padding: 20px 60px 80px 60px;  /* top right bottom left — reduced top to 20px */
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.webdev .projects-heading {
+    font-family: 'Poppins';
+    font-size: 80px;
+    color: rgb(121, 15, 15);
+    margin-bottom: 40px;
+}
+
+.webdev-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+.webdev-card:hover ~ .webdev-track,
+.webdev-track:has(.webdev-card:hover) {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.webdev-card {
+    min-width: 250px;
+    border: 2px solid rgb(121, 15, 15);
+    border-radius: 12px;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.webdev-card:hover {
+    transform: scaleY(1.05);
+}
+
+.webdev-card-img {
+    width: 100%;
+    height: 180px;
+    background: rgb(121, 15, 15);
+}
+
+.webdev-card-info {
+    padding: 16px;
+}
+
+.webdev-card h3 {
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.webdev-card p {
+    font-family: 'Poppins';
+    font-size: 12px;
+    color: rgb(180, 180, 180);
+    margin-bottom: 12px;
+}
+
+.tech {
+    font-family: 'Poppins';
+    font-size: 11px;
+    color: rgb(121, 15, 15);
+    border: 1px solid rgb(121, 15, 15);
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+@media (max-width: 480px) {
+    .projects { padding: 60px 15px; }
+    .projects-heading { font-size: 40px; margin-bottom: 20px; }
+    .fan-track { height: 260px; }
+    .fan-slide { width: 140px; }
+    .fan-slide img { height: 180px; }
+    .fan-slide h3 { font-size: 18px; }
+    .webdev { padding: 40px 15px; }
+    .webdev .projects-heading { font-size: 40px; }
+    .webdev-card { min-width: 150px; }
+    .webdev-card-img { height: 110px; }
+    .webdev-card h3 { font-size: 13px; }
+    .webdev-card p { font-size: 11px; }
+}

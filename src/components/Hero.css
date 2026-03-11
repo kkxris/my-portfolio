@@ -1,0 +1,113 @@
+.hero {
+  height: 100vh;
+  color: rgb(121, 15, 15);
+  position: relative;
+  position: relative;
+  /* KEY FIX ↓ */
+  top: 0;
+}
+
+.hero p1{
+  position: absolute;
+  display: inline-block;
+  background: transparent;
+  font-size: 250px;
+  top: 40%;
+  left: 10%;
+  z-index: 4;
+ font-family: 'Pinyon Script';
+}
+.hero p2{
+  position: absolute;
+  display: inline-block;
+  background: transparent;
+  font-size: 250px;
+  top: 47%;
+  left: 50%;
+  z-index: 4;
+ font-family: 'Pinyon Script';
+}
+.hero h1{
+  position: absolute;
+  display: inline-block;
+  background: transparent;
+  font-size: 130px;
+  top: 38%;
+  left: 22%;
+  z-index: 4;
+  font-family: 'Times New Roman', Times, serif;
+}
+.hero h2{
+  position: absolute;
+  display: inline-block;
+  background: transparent;
+  font-size: 130px;
+  top: 45%;
+  left: 59%;
+  z-index: 4;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.img1,
+.img2,
+.img3,
+.img4 {
+  position: absolute;   /* VERY IMPORTANT */
+  width: 260px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.img1 {
+  top: 5%;
+  left: 28%;
+  transform: rotate(-8deg);
+  z-index: 3;
+}
+
+.img2 {
+  top: 5%;
+  left: 36%;
+  transform: rotate(8deg);
+  z-index: 2;
+}
+.img3{
+  top: 5%;
+  left: 43%;
+  transform: rotate(5deg);
+  z-index: 1;
+}
+.img4{
+  top: 5%;
+  left: 48%;
+  transform: rotate(-12deg);
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  .hero p1, .hero p2 { font-size: 130px; }
+  .hero h1, .hero h2 { font-size: 70px; }
+  .img1, .img2, .img3, .img4 { width: 150px; }
+  .img1 { left: 20%; }
+  .img2 { left: 32%; }
+  .img3 { left: 44%; }
+  .img4 { left: 54%; }
+  .hero p1 { left: 5%; }
+  .hero p2 { left: 45%; }
+  .hero h1 { left: 18%; top: 36%; }
+  .hero h2 { left: 55%; top: 43%; }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .hero p1, .hero p2 { font-size: 80px; }
+  .hero h1, .hero h2 { font-size: 50px; }
+  .img1, .img2, .img3, .img4 { width: 120px; }
+  .img1 { top: 8%; left: 15%; }
+  .img2 { top: 8%; left: 30%; }
+  .img3 { top: 8%; left: 45%; }
+  .img4 { top: 8%; left: 58%; }
+  .hero p1 { top: 42%; left: 3%; }
+  .hero p2 { top: 52%; left: 45%; }
+  .hero h1 { top: 40%; left: 15%; }
+  .hero h2 { top: 50%; left: 55%; }
+}
